@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:onClick="mOnClick"
+            app:srcCompat="@drawable/back"
+            android:layout_weight="1.85" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="100"
+            android:layout_margin="10dp"
+            android:text="도서 등록"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_centerVertical="false"
+        android:isScrollContainer="false">
+
+        <TableLayout
+            android:id="@+id/book"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:stretchColumns="1">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/light_gray_whoAmI">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="웹 검색"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/searchKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="mOnClick"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+            </TableRow>
+
+            <ImageView
+                android:id="@+id/bookImage"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/addbook" />
+
+            <Button
+                android:id="@+id/btnAddImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="10dp"
+                android:onClick="mOnClick"
+                android:text="이미지 추가"
+                android:textSize="12dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/dayInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_span="2"
+                    android:onClick="back.png"
+                    android:textSize="13dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/bookTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="mOnClick"
+                    android:text="도서명"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/bookTitleInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_span="2"
+                    android:textSize="13dp" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="저자명"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/authorInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_span="2"
+                    android:textSize="13dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="출판사"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/publisherInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_span="2"
+                    android:textSize="13dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="분야"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/fieldInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_span="2"
+                    android:textSize="13dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/str_prompt_of_fieldList"/>
+
+            </TableRow>
+
+
+            <Button
+                android:id="@+id/btnAddBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/book"
+                android:layout_alignStart="@+id/book"
+                android:layout_below="@+id/book"
+                android:layout_marginTop="15dp"
+                android:onClick="mOnClick"
+                android:text="도서입력"
+                android:textSize="12dp" />
+        </TableLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

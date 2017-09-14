@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dip"
+    android:layout_height="450dip"
+
+
+    android:background="@drawable/background"
+    tools:context="com.example.leeyoonyoung.pray.ShowNoteActivity">
+
+    <TextView
+        android:id="@+id/bookTitle_showNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:text="도서명"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/date_showNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookTitle_showNote"
+        android:gravity="right"
+        android:paddingBottom="5dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="날짜"
+        android:textColor="@android:color/background_light" />
+
+    <ImageView
+        android:id="@+id/bookImage_showNote"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/date_showNote"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        app:srcCompat="@drawable/book" />
+
+    <TextView
+        android:id="@+id/line_showNote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bookImage_showNote"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="10dp"
+        android:singleLine="false"
+        android:text="내가 기록한 문장"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp" />
+</RelativeLayout>

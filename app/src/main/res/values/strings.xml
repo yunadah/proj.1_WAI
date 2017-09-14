@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">pray</string>
+
+    <string name="str_prompt_of_fieldList">분야를 선택해주세요.</string>
+</resources>

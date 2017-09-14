@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    tools:context="com.example.leeyoonyoung.pray.BookRegistrationActivity">
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_vertical"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/bookImage"
+        android:layout_width="98dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/book" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bookTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="도서명"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="저자"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="분야"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:gravity="right"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="날짜"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+</LinearLayout>

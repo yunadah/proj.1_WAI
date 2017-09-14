@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leeyoonyoung.pray.WriteNoteActivity">
+
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:onClick="mOnClick"
+            app:srcCompat="@drawable/back"
+            android:layout_weight="1.85" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="100"
+            android:layout_margin="10dp"
+            android:text="노트 작성"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/topBar"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="::: 나의 밑줄"
+            android:textColor="@color/colorAccent"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/myLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/whyLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="::: 나는 왜 이곳에 밑줄을 그었을까"
+            android:textColor="@color/colorAccent"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/myWhyLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+</RelativeLayout>
